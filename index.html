@@ -15,23 +15,25 @@
       <h1>Reserve AI</h1>
       <div class="chat-container">
         <div id="chat-box"></div>
-        <input
-          type="text"
-          id="text-input"
-          placeholder="Type your message here..."
-        />
-        <button onclick="sendMessage()">
-          <img
-            src="icons/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="Search"
+        <div id="chat-input">
+          <input
+            type="text"
+            id="text-input"
+            placeholder="Type your message here..."
           />
-        </button>
-        <button onclick="startVoiceRecognition()">
-          <img
-            src="icons/mic_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />
-        </button>
+          <button onclick="sendMessage()">
+            <img
+              src="icons/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Search"
+            />
+          </button>
+          <button onclick="startVoiceRecognition()">
+            <img
+              src="icons/mic_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </button>
+        </div>
       </div>
       <div class="payment-container">
         <h2>Make a Payment</h2>
