@@ -14,16 +14,17 @@ h1 {
 }
 
 button {
-  padding: 10px;
-  width: 60px;
-  color: #fff;
+  height: 40px;
+  width: 40px;
   border: none;
-  border-radius: 40px;
+  border-radius: 50%;
   cursor: pointer;
+  background-color: rgb(235, 235, 235);
+  transition: background-color 0.5s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgb(167, 167, 167);
 }
 
 .container {
@@ -60,8 +61,6 @@ button:hover {
 }
 #buttons button {
   margin-left: 10px;
-  background-color: #f3f3f3;
-  border: black 1px solid;
 }
 #text-input {
   padding: 10px;
@@ -69,7 +68,6 @@ button:hover {
 
 .payment-container {
   margin-top: 20px;
-  display: none;
 }
 
 #amount {
@@ -86,7 +84,6 @@ button:hover {
   background-color: #28a745;
   color: #fff;
   border: none;
-  display: none;
   height: 70px;
   border-radius: 100px;
   cursor: pointer;
