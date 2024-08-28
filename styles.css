@@ -15,10 +15,10 @@ h1 {
 
 button {
   padding: 10px;
-  background-color: #007bff;
+  width: 60px;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 40px;
   cursor: pointer;
 }
 
@@ -40,22 +40,36 @@ button:hover {
 }
 
 #chat-box {
-  border: 1px solid white;
+  border: black 1px solid;
   padding: 10px;
   height: 200px;
   overflow-y: scroll;
   margin-bottom: 10px;
   text-align: left;
 }
-
+#chat-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#chat-input input {
+  border: black 1px solid;
+}
+#buttons {
+  display: flex;
+}
+#buttons button {
+  margin-left: 10px;
+  background-color: #f3f3f3;
+  border: black 1px solid;
+}
 #text-input {
-  width: calc(100% - 90px);
   padding: 10px;
-  margin-right: 10px;
 }
 
 .payment-container {
   margin-top: 20px;
+  display: none;
 }
 
 #amount {
@@ -72,6 +86,7 @@ button:hover {
   background-color: #28a745;
   color: #fff;
   border: none;
+  display: none;
   height: 70px;
   border-radius: 100px;
   cursor: pointer;
