@@ -1,3 +1,15 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+.kode-mono-font {
+  font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
+  font-optical-sizing: auto;
+  /* 
+font-weight: Use a value from 400 to 700
+*/
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: black;
