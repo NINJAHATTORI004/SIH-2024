@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot with Voice and Payment Integration</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="C:\Users\HP\OneDrive\Desktop\SIH-2024\logo.ico" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>TEAM ACE IDEATES</h1>
-        <div class="chat-container">
-            <div id="chat-box"></div>
-            <input type="text" id="text-input" placeholder="Type your message here...">
-            <button onclick="sendMessage()">Send</button>
-            <button onclick="startVoiceRecognition()">Voice</button>
-        </div>
-        <div class="payment-container">
-            <h2>Make a Payment</h2>
-            <input type="number" id="amount" placeholder="Enter amount">
-            <button onclick="makePayment()">Pay</button>
-        </div>
+      <h1>TEAM ACE IDEATES</h1>
+      <div class="chat-container">
+        <div id="chat-box"></div>
+        <input
+          type="text"
+          id="text-input"
+          placeholder="Type your message here..."
+        />
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="startVoiceRecognition()">Voice</button>
+      </div>
+      <div class="payment-container">
+        <h2>Make a Payment</h2>
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <button onclick="makePayment()">Pay</button>
+      </div>
     </div>
 
-    <button class="floating-button" onclick="startImageRecognition()">Image</button>
+    <button class="floating-button" onclick="startImageRecognition()">
+      Image
+    </button>
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
