@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot with Voice and Payment Integration</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="C:\Users\HP\OneDrive\Desktop\SIH-2024\logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>TEAM ACE IDEATES</h1>
+      <h1>Reserve AI</h1>
       <div class="chat-container">
         <div id="chat-box"></div>
         <input
@@ -17,13 +20,28 @@
           id="text-input"
           placeholder="Type your message here..."
         />
-        <button onclick="sendMessage()">Send</button>
-        <button onclick="startVoiceRecognition()">Voice</button>
+        <button onclick="sendMessage()">
+          <img
+            src="icons/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Search"
+          />
+        </button>
+        <button onclick="startVoiceRecognition()">
+          <img
+            src="icons/mic_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </button>
       </div>
       <div class="payment-container">
         <h2>Make a Payment</h2>
         <input type="number" id="amount" placeholder="Enter amount" />
-        <button onclick="makePayment()">Pay</button>
+        <button onclick="makePayment()">
+          <img
+            src="icons/attach_money_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </button>
       </div>
     </div>
 
