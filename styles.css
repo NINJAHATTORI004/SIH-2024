@@ -1,7 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
   font-optical-sizing: auto;
@@ -10,6 +10,12 @@
 font-weight: Use a value from 400 to 700
 */
   font-weight: 500;
+  font-style: normal;
+}
+
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -60,10 +66,10 @@ header {
   justify-content: space-between;
   margin: 0px;
   background-color: #674636;
-  padding: 5px 200px;
+  padding: 0px 200px;
 }
 ul {
-  margin: 30px auto;
+  margin: 20px auto;
   display: flex;
   list-style: none;
   width: 400px;
@@ -78,6 +84,30 @@ li {
 }
 li:hover {
   background-color: #c3c9b8;
+}
+article {
+  margin: 100px 200px;
+  height: 600px;
+  background-size: cover;
+  border-radius: 12px;
+}
+#relics {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("images/bust-5524961_1280.jpg");
+}
+article h2 {
+  font-size: 4em;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin: 0px;
+  color: #fff8e8;
+}
+article h3 {
+  font-size: 3em;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin: 0px;
+  color: #aab396;
 }
 /* Chatbot popup */
 .chatbot-heading {
