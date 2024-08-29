@@ -27,14 +27,21 @@ function sendMessage() {
       botMessage.textContent = `Bot: ${data.response}`;
       chatBox.appendChild(botMessage);
       chatBox.scrollTop = chatBox.scrollHeight;
-    });
+    
+      if (data.response.includes('Your ticket has been generated')) {
+        const ticketLink = document.createElement('a');
+        ticketLink.href = 'ticket.pdf';
+        ticketLink.textContent = 'Download your ticket';
+        ticketLink.target = '_blank';
+        chatBox.appendChild(ticketLink);
+    }
+});
 
   textInput.value = "";
 }
 
 function startVoiceRecognition() {
-  const recognition = new (window.SpeechRecognition ||
-    window.webkitSpeechRecognition)();
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
   recognition.lang = "en-US"; // Change language code as needed
   recognition.start();
 
@@ -91,9 +98,7 @@ function startImageRecognition() {
       );
 
       const data = await response.json();
-      const labels = data.responses[0].labelAnnotations
-        .map((label) => label.description)
-        .join(", ");
+      const labels = data.responses[0].labelAnnotations.map((label) => label.description).join(", ");
 
       const chatBox = document.getElementById("chat-box");
       const botMessage = document.createElement("div");
@@ -120,7 +125,7 @@ function makePayment() {
     .then(response => response.json())
     .then(data => {
         const options = {
-            "key": "YOUR_RAZORPAY_KEY_ID", // Enter the Key ID generated from the Dashboard
+            "key": "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
             "amount": data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
             "currency": "INR",
             "name": "Museum Ticket Booking",
