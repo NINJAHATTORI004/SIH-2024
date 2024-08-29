@@ -7,10 +7,11 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "node-fetch": "^3.0.0",
-    "razorpay": "^2.0.0"
+    "node-fetch": "^3.3.2",
+    "pdf-lib": "^1.17.1",
+    "razorpay": "^2.9.4"
   },
   "description": "![1](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/ssss.jpg)",
   "keywords": [],
