@@ -16,11 +16,11 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #fff8e8;
+  color: white;
+
   margin: 0;
-  width: 100%;
   padding: 0;
-  height: 100vh;
 }
 
 h1 {
@@ -45,11 +45,40 @@ button:hover {
   background-color: rgb(167, 167, 167);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .hidden {
   display: none;
 }
 /* Sample Website */
-
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  background-color: #674636;
+  padding: 5px 200px;
+}
+ul {
+  margin: 30px auto;
+  display: flex;
+  list-style: none;
+  width: 400px;
+}
+li {
+  margin: 0px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #aab396;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #c3c9b8;
+}
 /* Chatbot popup */
 .chatbot-heading {
   display: flex;
