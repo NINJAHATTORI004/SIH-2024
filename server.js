@@ -11,7 +11,7 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
+
 
 const razorpay = new Razorpay({
     key_id: 'rzp_test_p9DwWiTZQqSyJk',
