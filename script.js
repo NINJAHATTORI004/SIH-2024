@@ -1,4 +1,6 @@
 const textInput = document.getElementById("text-input");
+const popupOpenButton = document.getElementById("popup-open");
+const chatbotContainer = document.getElementById("container");
 
 function sendMessage() {
   const message = textInput.value;
@@ -147,4 +149,8 @@ textInput.addEventListener("keyup", (event) => {
     sendMessage();
     console.log("here");
   }
+});
+popupOpenButton.addEventListener("click", () => {
+  chatbotContainer.classList.toggle("hidden");
+  popupOpenButton.classList.toggle("hidden");
 });
