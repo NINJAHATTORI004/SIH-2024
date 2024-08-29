@@ -43,14 +43,23 @@ button:hover {
   background-color: rgb(167, 167, 167);
 }
 
+.hidden {
+  display: none;
+}
 /* Sample Website */
 
-#sample {
-  text-align: center;
-  font-size: 10em;
-}
-
 /* Chatbot popup */
+#popup-open {
+  width: 100px;
+  height: 50px;
+  color: wheat;
+  background-color: black;
+  position: fixed;
+  bottom: 20px;
+  border-radius: 10px;
+
+  right: 20px;
+}
 .container {
   position: fixed;
   bottom: 10px;
