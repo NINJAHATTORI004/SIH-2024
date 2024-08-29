@@ -17,20 +17,55 @@ const razorpay = new Razorpay({
     key_secret: 'F4PemzpY3z0ybG7UQNA6aCfd'
 });
 
-app.post('/chat', async (req, res) => {
-    const userMessage = req.body.message;
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
-    // Simple chatbot logic
+
+app.post('/chat', async (req, res) => {
+    const userMessage = req.body.message.toLowerCase();
+
     let botResponse = 'I am sorry, I do not understand that.';
 
-    if (userMessage.toLowerCase().includes('ticket')) {
+    if (userMessage.includes('ticket')) {
         botResponse = 'Sure, I can help you with ticket booking. How many tickets do you need?';
-    } else if (userMessage.toLowerCase().includes('hello')) {
+    } else if (userMessage.includes('hello')) {
         botResponse = 'Hello! How can I assist you today?';
+    } else if (userMessage.includes('generate the museum tour ticket')) {
+        botResponse = 'Generating your museum tour ticket...';
+        await generatePDF();
+        botResponse += ' Your ticket has been generated.';
+    } else if (userMessage.includes('menu')) {
+        botResponse = 'Here are the options:\n1. Book a ticket\n2. Generate the museum tour ticket\n3. Make a payment\n4. Start voice recognition\n5. Start image recognition';
     }
 
     res.json({ response: botResponse });
 });
+
+async function generatePDF() {
+    const pdfDoc = await PDFDocument.create();
+    const page = pdfDoc.addPage([600, 400]);
+    const { width, height } = page.getSize();
+    const fontSize = 30;
+
+    page.drawText('Museum Tour Ticket', {
+        x: 50,
+        y: height - 4 * fontSize,
+        size: fontSize,
+        color: rgb(0, 0.53, 0.71),
+    });
+
+    page.drawText('Thank you for booking a tour with us!', {
+        x: 50,
+        y: height - 6 * fontSize,
+        size: fontSize,
+        color: rgb(0, 0, 0),
+    });
+
+    const pdfBytes = await pdfDoc.save();
+    fs.writeFileSync('ticket.pdf', pdfBytes);
+}
+
 
 app.post('/pay', async (req, res) => {
     const { amount, currency } = req.body;
