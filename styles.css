@@ -79,6 +79,30 @@ li {
 li:hover {
   background-color: #c3c9b8;
 }
+article {
+  margin: 100px 200px;
+  height: 600px;
+  background-size: cover;
+  border-radius: 12px;
+}
+#relics {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("images/bust-5524961_1280.jpg");
+}
+article h2 {
+  font-size: 4em;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin: 0px;
+  color: #fff8e8;
+}
+article h3 {
+  font-size: 3em;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin: 0px;
+  color: #aab396;
+}
 /* Chatbot popup */
 .chatbot-heading {
   display: flex;
