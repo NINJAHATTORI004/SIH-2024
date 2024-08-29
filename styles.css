@@ -53,7 +53,7 @@ button:hover {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #61140a;
 }
 
 .hidden {
@@ -65,7 +65,7 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0px;
-  background-color: #674636;
+  background-color: #800000;
   padding: 0px 200px;
 }
 ul {
@@ -78,12 +78,12 @@ li {
   margin: 0px auto;
   padding: 10px;
   border-radius: 10px;
-  background-color: #aab396;
+  background-color: #dad4b5;
   transition: background-color 0.5s;
   cursor: pointer;
 }
 li:hover {
-  background-color: #c3c9b8;
+  background-color: #fff9d9;
 }
 article {
   margin: 100px 200px;
@@ -119,18 +119,18 @@ article h3 {
   width: 60px;
   height: 40px;
   border-radius: 12px;
-  color: white;
-  background-color: #aab396;
+  color: #61140a;
+  background-color: #dad4b5;
 }
 
 #popup-close:hover {
-  background-color: #c3c9b8;
+  background-color: #fff9d9;
 }
 #popup-open {
   width: 100px;
   height: 50px;
-  color: white;
-  background-color: #aab396;
+  color: #61140a;
+  background-color: #dad4b5;
   position: fixed;
   bottom: 20px;
   border-radius: 12px;
@@ -138,12 +138,12 @@ article h3 {
 }
 
 #popup-open:hover {
-  background-color: #c3c9b8;
+  background-color: #fff9d9;
 }
 .container {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   background-color: #f0e6cf;
   padding: 15px;
   border-radius: 12px;
@@ -152,10 +152,11 @@ article h3 {
 }
 
 #chat-box {
-  border: #674636 2px solid;
+  border: #800000 2px solid;
   padding: 10px;
   height: 300px;
   margin-top: 10px;
+  background-color: #fff;
   overflow-y: scroll;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -177,7 +178,7 @@ article h3 {
   justify-content: space-between;
 }
 #chat-input input {
-  border: #674636 2px solid;
+  border: #800000 2px solid;
   border-radius: 6px;
   width: 100%;
   font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
