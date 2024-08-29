@@ -1,5 +1,6 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
@@ -10,6 +11,7 @@ font-weight: Use a value from 400 to 700
   font-weight: 500;
   font-style: normal;
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: white;
@@ -70,6 +72,11 @@ button:hover {
   border-radius: 6px;
   margin-bottom: 10px;
   text-align: left;
+}
+#chat-box div {
+  font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 #chat-input {
   display: flex;
