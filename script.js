@@ -1,4 +1,7 @@
 const textInput = document.getElementById("text-input");
+const popupOpenButton = document.getElementById("popup-open");
+const chatbotContainer = document.getElementById("container");
+const popupCloseButton = document.getElementById("popup-close");
 
 function sendMessage() {
   const message = textInput.value;
@@ -145,4 +148,12 @@ textInput.addEventListener("keyup", (event) => {
     sendMessage();
     console.log("here");
   }
+});
+popupOpenButton.addEventListener("click", () => {
+  chatbotContainer.classList.toggle("hidden");
+  popupOpenButton.classList.toggle("hidden");
+});
+popupCloseButton.addEventListener("click", () => {
+  chatbotContainer.classList.toggle("hidden");
+  popupOpenButton.classList.toggle("hidden");
 });

@@ -5,6 +5,7 @@
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
   font-optical-sizing: auto;
+  color: black;
   /* 
 font-weight: Use a value from 400 to 700
 */
@@ -16,15 +17,15 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #fff8e8;
+  color: white;
+
   margin: 0;
-  width: 100%;
   padding: 0;
-  height: 100vh;
 }
 
 h1 {
-  margin: 0px auto;
+  margin: 0px;
 }
 
 button {
@@ -34,8 +35,9 @@ button {
   border-radius: 50%;
   cursor: pointer;
   background-color: white;
-  border: black 2px solid;
-
+  font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   transition: background-color 0.5s;
 }
 
@@ -43,45 +45,98 @@ button:hover {
   background-color: rgb(167, 167, 167);
 }
 
-/* Sample Website */
-
-#sample {
-  text-align: center;
-  font-size: 10em;
+a {
+  text-decoration: none;
+  color: white;
 }
 
+.hidden {
+  display: none;
+}
+/* Sample Website */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  background-color: #674636;
+  padding: 5px 200px;
+}
+ul {
+  margin: 30px auto;
+  display: flex;
+  list-style: none;
+  width: 400px;
+}
+li {
+  margin: 0px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #aab396;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #c3c9b8;
+}
 /* Chatbot popup */
+.chatbot-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#popup-close {
+  width: 60px;
+  height: 40px;
+  border-radius: 12px;
+  color: white;
+  background-color: #aab396;
+}
+
+#popup-close:hover {
+  background-color: #c3c9b8;
+}
+#popup-open {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #aab396;
+  position: fixed;
+  bottom: 20px;
+  border-radius: 12px;
+  right: 20px;
+}
+
+#popup-open:hover {
+  background-color: #c3c9b8;
+}
 .container {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: white;
+  background-color: #f0e6cf;
   padding: 15px;
-  border: black 4px solid;
-  border-radius: 6px;
+  border: black 3px solid;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 400px;
-  text-align: center;
-}
-
-.chat-container {
-  margin-bottom: 20px;
 }
 
 #chat-box {
   border: black 2px solid;
   padding: 10px;
-  height: 200px;
+  height: 300px;
   margin-top: 10px;
   overflow-y: scroll;
   border-radius: 6px;
   margin-bottom: 10px;
-  text-align: left;
 }
 #chat-box div {
   font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
   font-weight: 500;
+  color: black;
   font-style: normal;
+  font-size: 1.15em;
 }
 
 /* Input Styles */
@@ -96,6 +151,9 @@ button:hover {
   border: black 2px solid;
   border-radius: 6px;
   width: 100%;
+  font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 #buttons {
   display: flex;
@@ -109,6 +167,7 @@ button:hover {
 
 .payment-container {
   margin-top: 20px;
+  display: none;
 }
 
 #amount {

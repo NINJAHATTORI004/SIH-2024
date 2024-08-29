@@ -11,11 +11,27 @@
     />
   </head>
   <body>
-    <h1 id="sample">SAMPLE WEBSITE</h1>
-
+    <header>
+      <h1>Museum</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href=""> About Us </a>
+          </li>
+          <li>
+            <a href="">Gallery</a>
+          </li>
+          <li><a href="">Gift Shop</a></li>
+          <li><a href=""> Support Us </a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- Ticket Chatbot  -->
-    <div class="container">
-      <h1 class="kode-mono-font">Reserve.AI</h1>
+    <div id="container" class="container hidden">
+      <div class="chatbot-heading">
+        <h1 class="kode-mono-font">Reserve.AI</h1>
+        <button id="popup-close">Close</button>
+      </div>
       <div class="chat-container">
         <div id="chat-box"></div>
         <div id="chat-input">
@@ -51,7 +67,10 @@
         </button>
       </div>
     </div>
-    <button class="floating-button" onclick="startImageRecognition()">Image </button>
+    <button id="popup-open">Buy Tickets</button>
+    <button class="floating-button" onclick="startImageRecognition()">
+      Image
+    </button>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="script.js"></script>
   </body>
