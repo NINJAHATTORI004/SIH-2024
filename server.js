@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 const razorpay = new Razorpay({
-    key_id: 'YOUR_RAZORPAY_KEY_ID',
-    key_secret: 'YOUR_RAZORPAY_KEY_SECRET'
+    key_id: 'rzp_test_p9DwWiTZQqSyJk',
+    key_secret: 'F4PemzpY3z0ybG7UQNA6aCfd'
 });
 
 app.post('/chat', async (req, res) => {

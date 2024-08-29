@@ -110,7 +110,7 @@ function makePayment() {
     .then(response => response.json())
     .then(data => {
         const options = {
-            "key": "YOUR_RAZORPAY_KEY_ID", // Enter the Key ID generated from the Dashboard
+            "key": "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
             "amount": data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
             "currency": "INR",
             "name": "Museum Ticket Booking",
