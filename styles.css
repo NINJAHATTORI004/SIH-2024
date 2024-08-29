@@ -12,6 +12,8 @@ font-weight: Use a value from 400 to 700
   font-style: normal;
 }
 
+/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   background-color: white;
@@ -41,11 +43,14 @@ button:hover {
   background-color: rgb(167, 167, 167);
 }
 
+/* Sample Website */
+
 #sample {
   text-align: center;
   font-size: 10em;
 }
 
+/* Chatbot popup */
 .container {
   position: fixed;
   bottom: 10px;
@@ -78,6 +83,9 @@ button:hover {
   font-weight: 500;
   font-style: normal;
 }
+
+/* Input Styles */
+
 #chat-input {
   display: flex;
   align-items: center;
@@ -109,6 +117,7 @@ button:hover {
   margin-right: 10px;
 }
 
+/* Floating Icon */
 .floating-button {
   position: fixed;
   bottom: 20px;
