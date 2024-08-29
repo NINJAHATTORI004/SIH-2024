@@ -116,14 +116,13 @@ li:hover {
   right: 10px;
   background-color: #f0e6cf;
   padding: 15px;
-  border: black 3px solid;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 400px;
 }
 
 #chat-box {
-  border: black 2px solid;
+  border: #674636 2px solid;
   padding: 10px;
   height: 300px;
   margin-top: 10px;
@@ -148,7 +147,7 @@ li:hover {
   justify-content: space-between;
 }
 #chat-input input {
-  border: black 2px solid;
+  border: #674636 2px solid;
   border-radius: 6px;
   width: 100%;
   font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
