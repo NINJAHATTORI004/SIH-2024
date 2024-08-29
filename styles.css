@@ -35,7 +35,6 @@ button {
   border-radius: 50%;
   cursor: pointer;
   background-color: white;
-  border: black 2px solid;
   font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -93,6 +92,10 @@ li:hover {
   color: white;
   background-color: #aab396;
 }
+
+#popup-close:hover {
+  background-color: #c3c9b8;
+}
 #popup-open {
   width: 100px;
   height: 50px;
@@ -102,6 +105,10 @@ li:hover {
   bottom: 20px;
   border-radius: 12px;
   right: 20px;
+}
+
+#popup-open:hover {
+  background-color: #c3c9b8;
 }
 .container {
   position: fixed;
