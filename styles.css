@@ -1,7 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
   font-optical-sizing: auto;
@@ -10,6 +10,12 @@
 font-weight: Use a value from 400 to 700
 */
   font-weight: 500;
+  font-style: normal;
+}
+
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
