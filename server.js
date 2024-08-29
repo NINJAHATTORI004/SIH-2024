@@ -5,6 +5,7 @@ import Razorpay from 'razorpay';
 import { PDFDocument, rgb } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const port = 3000;
@@ -17,10 +18,13 @@ const razorpay = new Razorpay({
     key_secret: 'F4PemzpY3z0ybG7UQNA6aCfd'
 });
 
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-
 
 app.post('/chat', async (req, res) => {
     const userMessage = req.body.message.toLowerCase();
@@ -65,7 +69,6 @@ async function generatePDF() {
     const pdfBytes = await pdfDoc.save();
     fs.writeFileSync('ticket.pdf', pdfBytes);
 }
-
 
 app.post('/pay', async (req, res) => {
     const { amount, currency } = req.body;
