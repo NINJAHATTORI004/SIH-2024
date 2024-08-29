@@ -35,7 +35,9 @@ button {
   cursor: pointer;
   background-color: white;
   border: black 2px solid;
-
+  font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   transition: background-color 0.5s;
 }
 
@@ -111,6 +113,9 @@ button:hover {
   border: black 2px solid;
   border-radius: 6px;
   width: 100%;
+  font-family: "Lato", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 #buttons {
   display: flex;
