@@ -27,15 +27,15 @@ function sendMessage() {
       botMessage.textContent = `Bot: ${data.response}`;
       chatBox.appendChild(botMessage);
       chatBox.scrollTop = chatBox.scrollHeight;
-    
+
       if (data.response.includes('Your ticket has been generated')) {
         const ticketLink = document.createElement('a');
         ticketLink.href = 'ticket.pdf';
         ticketLink.textContent = 'Download your ticket';
         ticketLink.target = '_blank';
         chatBox.appendChild(ticketLink);
-    }
-});
+      }
+    });
 
   textInput.value = "";
 }
@@ -115,43 +115,42 @@ function makePayment() {
   const amount = document.getElementById("amount").value;
   if (amount.trim() === "") return;
 
-    fetch('/pay', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ amount: parseInt(amount) * 100, currency: 'INR' }) // Amount in paise
-    })
-    .then(response => response.json())
-    .then(data => {
-        const options = {
-            "key": "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
-            "amount": data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
-            "currency": "INR",
-            "name": "Museum Ticket Booking",
-            "description": "Ticket Booking Payment",
-            "order_id": data.id, // This is a sample Order ID. Pass the `id` obtained in the previous step
-            "handler": function (response){
-                alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
-            },
-            "prefill": {
-                "name": "Your Name",
-                "email": "your.email@example.com",
-                "contact": "9999999999"
-            },
-            "theme": {
-                "color": "#3399cc"
-            }
-        };
-        const rzp1 = new Razorpay(options);
-        rzp1.open();
-    });
+  fetch('/pay', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ amount: parseInt(amount) * 100, currency: 'INR' }) // Amount in paise
+  })
+  .then(response => response.json())
+  .then(data => {
+    const options = {
+      "key": "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
+      "amount": data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
+      "currency": "INR",
+      "name": "Museum Ticket Booking",
+      "description": "Ticket Booking Payment",
+      "order_id": data.id, // This is a sample Order ID. Pass the `id` obtained in the previous step
+      "handler": function (response){
+        alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+      },
+      "prefill": {
+        "name": "Your Name",
+        "email": "your.email@example.com",
+        "contact": "9999999999"
+      },
+      "theme": {
+        "color": "#3399cc"
+      }
+    };
+    const rzp1 = new Razorpay(options);
+    rzp1.open();
+  });
 }
 
 textInput.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
     sendMessage();
-    console.log("here");
   }
 });
 popupOpenButton.addEventListener("click", () => {

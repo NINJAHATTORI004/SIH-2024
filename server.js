@@ -12,18 +12,20 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 const razorpay = new Razorpay({
     key_id: 'rzp_test_p9DwWiTZQqSyJk',
     key_secret: 'F4PemzpY3z0ybG7UQNA6aCfd'
 });
 
-// Get the directory name of the current module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.post('/chat', async (req, res) => {
@@ -67,7 +69,7 @@ async function generatePDF() {
     });
 
     const pdfBytes = await pdfDoc.save();
-    fs.writeFileSync('ticket.pdf', pdfBytes);
+    fs.writeFileSync('public/ticket.pdf', pdfBytes);
 }
 
 app.post('/pay', async (req, res) => {
