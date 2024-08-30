@@ -78,16 +78,18 @@ ul {
   width: 400px;
 }
 li {
-  margin: 0px auto;
+  margin: 0 auto;
+}
+li a {
   padding: 10px;
   border-radius: 10px;
   background-color: #dad4b5;
   transition: background-color 0.5s;
-  cursor: pointer;
 }
-li:hover {
+li a:hover {
   background-color: hsl(50, 15%, 50%);
 }
+
 article {
   margin: 100px 200px;
   height: 600px;
