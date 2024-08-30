@@ -95,6 +95,18 @@ article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
     url("images/bust-5524961_1280.jpg");
 }
+#fashion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("images/Vintage\ Sophistication.jpg");
+}
+#cycladic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("images/background-7275953_1280.jpg");
+}
+#ganesha {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("images/78a7b84c11ebf0c72f8ed03fd16387a6660eec7d-5120x1707.webp");
+}
 article h2 {
   font-size: 4em;
   padding-left: 20px;
