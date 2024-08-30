@@ -40,7 +40,7 @@ app.post('/chat', async (req, res) => {
     } else if (userMessage.includes('generate the museum tour ticket')) {
         botResponse = 'Generating your museum tour ticket...';
         await generatePDF();
-        botResponse += ' Your ticket has been generated.';
+        botResponse = 'Your ticket has been generated. <a href="/ticket.pdf" target="_blank">Download your ticket here</a>';
     } else if (userMessage.includes('menu')) {
         botResponse = 'Here are the options:\n1. Book a ticket\n2. Generate the museum tour ticket\n3. Make a payment\n4. Start voice recognition\n5. Start image recognition';
     }
@@ -69,7 +69,7 @@ async function generatePDF() {
     });
 
     const pdfBytes = await pdfDoc.save();
-    fs.writeFileSync('public/ticket.pdf', pdfBytes);
+    fs.writeFileSync(path.join(__dirname, 'public', 'ticket.pdf'), pdfBytes);
 }
 
 app.post('/pay', async (req, res) => {
