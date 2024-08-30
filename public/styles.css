@@ -64,11 +64,19 @@ a {
 /* Sample Website */
 header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 0px;
   background-color: #800000;
-  padding: 0px 200px;
+}
+header h1 {
+  margin-left: 200px;
+}
+nav {
+  margin-right: 200px;
 }
 ul {
   margin: 20px auto;
