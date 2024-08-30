@@ -86,7 +86,7 @@ li {
   cursor: pointer;
 }
 li:hover {
-  background-color: #fff9d9;
+  background-color: hsl(50, 15%, 50%);
 }
 article {
   margin: 100px 200px;
@@ -144,12 +144,13 @@ article h3 {
 }
 
 #popup-close:hover {
-  background-color: #fff9d9;
+  background-color: hsl(50, 15%, 70%);
 }
 #popup-open {
   width: 100px;
   height: 50px;
   color: #61140a;
+  font-size: 16px;
   background-color: #dad4b5;
   position: fixed;
   bottom: 20px;
@@ -158,7 +159,7 @@ article h3 {
 }
 
 #popup-open:hover {
-  background-color: #fff9d9;
+  background-color: hsl(50, 15%, 70%);
 }
 .container {
   position: fixed;
