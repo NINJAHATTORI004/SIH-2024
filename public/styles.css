@@ -23,9 +23,12 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff8e8;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/pexels-atlasworld-1674049.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
-
   margin: 0;
   padding: 0;
 }
@@ -84,6 +87,8 @@ li {
 }
 li:hover {
   background-color: #fff9d9;
+}
+main {
 }
 article {
   margin: 100px 200px;
