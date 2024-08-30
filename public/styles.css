@@ -88,13 +88,16 @@ li {
 li:hover {
   background-color: #fff9d9;
 }
-main {
-}
 article {
   margin: 100px 200px;
   height: 600px;
   background-size: cover;
   border-radius: 12px;
+  border: #000000 2px solid;
+  transition: border 0.5s;
+}
+article:hover {
+  border: #dad4b5 2px solid;
 }
 #relics {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
