@@ -23,8 +23,7 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(images/pexels-atlasworld-1674049.jpg);
+  background-image: url(images/pexels-atlasworld-1674049.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -96,6 +95,7 @@ article {
   background-size: cover;
   border-radius: 12px;
   border: #000000 2px solid;
+  box-shadow: 2px 2px 25px rgb(0, 0, 0);
   transition: border 0.5s;
 }
 article:hover {
