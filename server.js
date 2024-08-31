@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
 import Razorpay from 'razorpay';
-import { PDFDocument, rgb } from 'pdf-lib';
+import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -38,8 +38,8 @@ app.post('/chat', async (req, res) => {
     } else if (userMessage.includes('generate the museum tour passes')) {
         botResponse = 'Generating your museum tour ticket...';
         try {
-            await generatePDF();
-            botResponse = 'Your ticket has been generated';
+            const ticketPath = await generatePDF();
+            botResponse = `Your ticket has been generated. <a href="${ticketPath}" target="_blank">Download your ticket here</a>`;
         } catch (error) {
             console.error('Error generating PDF:', error);
             botResponse = 'There was an error generating your ticket. Please try again later.';
@@ -58,6 +58,19 @@ async function generatePDF() {
         const { width, height } = page.getSize();
         const fontSize = 30;
 
+        // Load the background image
+        const backgroundImageBytes = fs.readFileSync(path.join(__dirname, 'public', 'background_stuff.png'));
+        const backgroundImage = await pdfDoc.embedPng(backgroundImageBytes);
+        const backgroundDims = backgroundImage.scale(1);
+
+        page.drawImage(backgroundImage, {
+            x: 0,
+            y: 0,
+            width: width,
+            height: height,
+        });
+
+        // Add text over the background image
         page.drawText('Museum Tour Ticket', {
             x: 50,
             y: height - 4 * fontSize,
@@ -73,8 +86,10 @@ async function generatePDF() {
         });
 
         const pdfBytes = await pdfDoc.save();
-        fs.writeFileSync(path.join(__dirname, 'public', 'ticket.pdf'), pdfBytes);
+        const ticketPath = path.join(__dirname, 'public', `ticket_${Date.now()}.pdf`);
+        fs.writeFileSync(ticketPath, pdfBytes);
         console.log('PDF generated successfully');
+        return ticketPath;
     } catch (error) {
         console.error('Error generating PDF:', error);
         throw error;

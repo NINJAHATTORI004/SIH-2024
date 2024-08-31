@@ -25,7 +25,7 @@ function sendMessage() {
     .then((response) => response.json())
     .then((data) => {
       const botMessage = document.createElement("div");
-      botMessage.textContent = `Bot: ${data.response}`;
+      botMessage.innerHTML = `Bot: ${data.response}`;
       chatBox.appendChild(botMessage);
       chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -168,4 +168,24 @@ popupCloseButton.addEventListener("click", () => {
   chatbotContainer.classList.toggle("hidden");
   popupOpenButton.classList.toggle("hidden");
   searchButton.classList.toggle("hidden");
+});
+
+// Botpress Webchat Integration
+window.botpressWebChat.init({
+  hostUrl: "https://mediafiles.botpress.cloud/807be16c-305a-4efd-9c71-d90d52f6ffbe",
+  botId: "807be16c-305a-4efd-9c71-d90d52f6ffbe",
+  messagingUrl: "https://cdn.botpress.cloud/webchat/v2.1",
+  clientId: "b21166bc-ebb8-4817-968b-d8bfddf2470d",
+  botName: "Museum Bot",
+  botAvatarUrl: "https://your-avatar-url.com/avatar.png",
+  showPoweredBy: false,
+  enableReset: true,
+  enableTranscriptDownload: true,
+  enableConversationHistory: true,
+  enablePersistentMenu: true,
+  persistentMenuItems: [
+    { type: "postback", title: "Main Menu", payload: "menu" },
+    { type: "postback", title: "Generate Ticket", payload: "generate the museum tour passes" },
+    { type: "postback", title: "Make Payment", payload: "make a payment" },
+  ],
 });
