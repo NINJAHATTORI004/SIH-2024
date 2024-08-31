@@ -14,6 +14,7 @@ Advanced Interaction Features: Includes voice-to-text, text-to-voice, image reco
 
 User-Friendly Interface: Provides an intuitive interface for handling customer queries and issues.
 
+
 # Technologies Used
 Botpress: Open-source chatbot framework for building and managing conversational interfaces.
 
@@ -27,6 +28,9 @@ Vision AI: Image recognition technology for processing and interpreting visual d
 
 MongoDB: NoSQL database for storing user data and booking information.
 
+# Botpress OVERVIEW 
+![2](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/BOTPRESS%20MODEL.jpg) 
+
 # Installation Prerequisites
 
   Node.js (v14.x or higher)
@@ -39,7 +43,7 @@ For any questions or support, please reach out to anshmittal132@gmail.com.
 
   
 # Reserve.AI OVERFLOW
-![2](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/bot%20overflow.jpg
+![3](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/bot%20overflow.jpg
 )  
 # Reserve.AI Interface
-![3](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/Reserve.AI%20WORKING.png)   
+![4](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/Reserve.AI%20WORKING.png)   
