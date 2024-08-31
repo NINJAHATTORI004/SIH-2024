@@ -39,7 +39,7 @@ app.post('/chat', async (req, res) => {
         botResponse = 'Generating your museum tour ticket...';
         try {
             await generatePDF();
-            botResponse = 'Your ticket has been generated. <a href="/ticket.pdf" target="_blank">Download your ticket here</a>';
+            botResponse = 'Your ticket has been generated';
         } catch (error) {
             console.error('Error generating PDF:', error);
             botResponse = 'There was an error generating your ticket. Please try again later.';
