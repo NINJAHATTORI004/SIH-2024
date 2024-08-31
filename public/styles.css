@@ -83,6 +83,9 @@ header {
 header h1 {
   margin-left: 200px;
 }
+#heading-title {
+  color: white;
+}
 nav {
   margin-right: 200px;
 }
