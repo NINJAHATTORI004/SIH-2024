@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
 import Razorpay from 'razorpay';
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, rgb } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -59,7 +59,11 @@ async function generatePDF() {
         const fontSize = 30;
 
         // Load the background image
-        const backgroundImageBytes = fs.readFileSync(path.join(__dirname, 'public', 'background_stuff.png'));
+        const backgroundImagePath = path.join(__dirname, 'public', 'background_stuff.png');
+        if (!fs.existsSync(backgroundImagePath)) {
+            throw new Error(`Background image not found at path: ${backgroundImagePath}`);
+        }
+        const backgroundImageBytes = fs.readFileSync(backgroundImagePath);
         const backgroundImage = await pdfDoc.embedPng(backgroundImageBytes);
         const backgroundDims = backgroundImage.scale(1);
 
@@ -89,7 +93,7 @@ async function generatePDF() {
         const ticketPath = path.join(__dirname, 'public', `ticket_${Date.now()}.pdf`);
         fs.writeFileSync(ticketPath, pdfBytes);
         console.log('PDF generated successfully');
-        return ticketPath;
+        return `/ticket_${Date.now()}.pdf`;
     } catch (error) {
         console.error('Error generating PDF:', error);
         throw error;
