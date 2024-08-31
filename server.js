@@ -35,7 +35,7 @@ app.post('/chat', async (req, res) => {
         botResponse = 'Sure, I can help you with ticket booking. How many tickets do you need?';
     } else if (userMessage.includes('hello')) {
         botResponse = 'Hello! How can I assist you today?';
-    } else if (userMessage.includes('generate the museum tour ticket')) {
+    } else if (userMessage.includes('generate the museum tour passes')) {
         botResponse = 'Generating your museum tour ticket...';
         try {
             await generatePDF();
@@ -45,7 +45,7 @@ app.post('/chat', async (req, res) => {
             botResponse = 'There was an error generating your ticket. Please try again later.';
         }
     } else if (userMessage.includes('menu')) {
-        botResponse = 'Here are the options:\n1. Book a ticket\n2. Generate the museum tour ticket\n3. Make a payment\n4. Start voice recognition\n5. Start image recognition';
+        botResponse = 'Here are the options:\n1. Book a ticket\n2. Generate the museum tour token\n3. Make a payment\n4. Start voice recognition\n5. Start image recognition';
     }
 
     res.json({ response: botResponse });
