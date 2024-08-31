@@ -23,7 +23,11 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(images/pexels-atlasworld-1674049.webp);
+  background-image: linear-gradient(
+      hsla(0, 0%, 0%, 0.502),
+      hsla(0, 0%, 0%, 0.516)
+    ),
+    url(images/pexels-atlasworld-1674049.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -139,6 +143,20 @@ article h3 {
   padding-top: 20px;
   margin: 0px;
   color: #aab396;
+}
+/* About Page */
+.about-section {
+  padding: 100px 200px;
+}
+.about-section p {
+  padding: 20px;
+  font-size: 2em;
+}
+.about-section h1 {
+  font-size: 4em;
+}
+.about-section h2 {
+  font-size: 3em;
 }
 /* Chatbot popup */
 .chatbot-heading {
