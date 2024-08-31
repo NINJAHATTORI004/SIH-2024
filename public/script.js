@@ -2,6 +2,7 @@ const textInput = document.getElementById("text-input");
 const popupOpenButton = document.getElementById("popup-open");
 const chatbotContainer = document.getElementById("container");
 const popupCloseButton = document.getElementById("popup-close");
+const searchButton = document.getElementById("image-search");
 
 function sendMessage() {
   const message = textInput.value;
@@ -28,11 +29,11 @@ function sendMessage() {
       chatBox.appendChild(botMessage);
       chatBox.scrollTop = chatBox.scrollHeight;
 
-      if (data.response.includes('Your ticket has been generated')) {
-        const ticketLink = document.createElement('a');
-        ticketLink.href = 'ticket.pdf';
-        ticketLink.textContent = 'Download your ticket';
-        ticketLink.target = '_blank';
+      if (data.response.includes("Your ticket has been generated")) {
+        const ticketLink = document.createElement("a");
+        ticketLink.href = "ticket.pdf";
+        ticketLink.textContent = "Download your ticket";
+        ticketLink.target = "_blank";
         chatBox.appendChild(ticketLink);
       }
     });
@@ -41,7 +42,8 @@ function sendMessage() {
 }
 
 function startVoiceRecognition() {
-  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  const recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition)();
   recognition.lang = "en-US"; // Change language code as needed
   recognition.start();
 
@@ -98,7 +100,9 @@ function startImageRecognition() {
       );
 
       const data = await response.json();
-      const labels = data.responses[0].labelAnnotations.map((label) => label.description).join(", ");
+      const labels = data.responses[0].labelAnnotations
+        .map((label) => label.description)
+        .join(", ");
 
       const chatBox = document.getElementById("chat-box");
       const botMessage = document.createElement("div");
@@ -115,37 +119,39 @@ function makePayment() {
   const amount = document.getElementById("amount").value;
   if (amount.trim() === "") return;
 
-  fetch('/pay', {
-    method: 'POST',
+  fetch("/pay", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ amount: parseInt(amount) * 100, currency: 'INR' }) // Amount in paise
+    body: JSON.stringify({ amount: parseInt(amount) * 100, currency: "INR" }), // Amount in paise
   })
-  .then(response => response.json())
-  .then(data => {
-    const options = {
-      "key": "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
-      "amount": data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
-      "currency": "INR",
-      "name": "Museum Ticket Booking",
-      "description": "Ticket Booking Payment",
-      "order_id": data.id, // This is a sample Order ID. Pass the `id` obtained in the previous step
-      "handler": function (response){
-        alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
-      },
-      "prefill": {
-        "name": "Your Name",
-        "email": "your.email@example.com",
-        "contact": "9999999999"
-      },
-      "theme": {
-        "color": "#3399cc"
-      }
-    };
-    const rzp1 = new Razorpay(options);
-    rzp1.open();
-  });
+    .then((response) => response.json())
+    .then((data) => {
+      const options = {
+        key: "rzp_test_p9DwWiTZQqSyJk", // Enter the Key ID generated from the Dashboard
+        amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
+        currency: "INR",
+        name: "Museum Ticket Booking",
+        description: "Ticket Booking Payment",
+        order_id: data.id, // This is a sample Order ID. Pass the `id` obtained in the previous step
+        handler: function (response) {
+          alert(
+            "Payment successful. Payment ID: " + response.razorpay_payment_id
+          );
+        },
+        prefill: {
+          name: "Your Name",
+          email: "your.email@example.com",
+          contact: "9999999999",
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      };
+      const rzp1 = new Razorpay(options);
+      rzp1.open();
+    });
 }
 
 textInput.addEventListener("keyup", (event) => {
@@ -156,8 +162,10 @@ textInput.addEventListener("keyup", (event) => {
 popupOpenButton.addEventListener("click", () => {
   chatbotContainer.classList.toggle("hidden");
   popupOpenButton.classList.toggle("hidden");
+  searchButton.classList.toggle("hidden");
 });
 popupCloseButton.addEventListener("click", () => {
   chatbotContainer.classList.toggle("hidden");
   popupOpenButton.classList.toggle("hidden");
+  searchButton.classList.toggle("hidden");
 });
