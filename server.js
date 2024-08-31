@@ -60,6 +60,7 @@ async function generatePDF() {
 
         // Load the background image
         const backgroundImagePath = path.join(__dirname, 'public', 'background_stuff.png');
+        console.log(`Background image path: ${backgroundImagePath}`); // Log the path
         if (!fs.existsSync(backgroundImagePath)) {
             throw new Error(`Background image not found at path: ${backgroundImagePath}`);
         }

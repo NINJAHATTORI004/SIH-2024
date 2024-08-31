@@ -176,7 +176,7 @@ window.botpressWebChat.init({
   botId: "807be16c-305a-4efd-9c71-d90d52f6ffbe",
   messagingUrl: "https://cdn.botpress.cloud/webchat/v2.1",
   clientId: "b21166bc-ebb8-4817-968b-d8bfddf2470d",
-  botName: "Museum Bot",
+  botName: "ReserveAI",
   botAvatarUrl: "https://your-avatar-url.com/avatar.png",
   showPoweredBy: false,
   enableReset: true,
