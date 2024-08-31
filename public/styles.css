@@ -151,22 +151,27 @@ article h3 {
   color: #aab396;
 }
 /* About Page */
-.about-section {
+section {
   padding: 100px 200px;
 }
-.about-section p {
+section p {
   padding: 20px;
   font-size: 2em;
 }
-.about-section h1 {
+section h1 {
   font-size: 4em;
 }
-.about-section h2 {
+section h2 {
   font-size: 3em;
 }
 
-.about-section img {
+section img {
   width: 100%;
+}
+
+/* Support Page Styles */
+.support li {
+  font-size: 2em;
 }
 /* Chatbot popup */
 .chatbot-heading {
