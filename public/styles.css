@@ -333,7 +333,7 @@ section img {
 /* Floating Icon */
 .floating-button {
   position: fixed;
-  bottom: 80px;
+  bottom: 100px;
   right: 20px;
   background-color: #dad4b5;
   color: #61140a;
