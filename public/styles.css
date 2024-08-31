@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
   font-optical-sizing: auto;
@@ -23,13 +24,19 @@ font-weight: Use a value from 400 to 700
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(images/pexels-atlasworld-1674049.jpg);
+  background-image: linear-gradient(
+      hsla(0, 0%, 0%, 0.502),
+      hsla(0, 0%, 0%, 0.516)
+    ),
+    url(images/pexels-atlasworld-1674049.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: white;
   margin: 0;
   padding: 0;
+  font-family: "Lora", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 100;
 }
 
 h1 {
@@ -75,6 +82,9 @@ header {
 }
 header h1 {
   margin-left: 200px;
+}
+#heading-title {
+  color: white;
 }
 nav {
   margin-right: 200px;
@@ -139,6 +149,20 @@ article h3 {
   padding-top: 20px;
   margin: 0px;
   color: #aab396;
+}
+/* About Page */
+.about-section {
+  padding: 100px 200px;
+}
+.about-section p {
+  padding: 20px;
+  font-size: 2em;
+}
+.about-section h1 {
+  font-size: 4em;
+}
+.about-section h2 {
+  font-size: 3em;
 }
 /* Chatbot popup */
 .chatbot-heading {

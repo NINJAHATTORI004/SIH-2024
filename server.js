@@ -12,11 +12,9 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-// Get the directory name of the current module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 const razorpay = new Razorpay({
@@ -39,8 +37,13 @@ app.post('/chat', async (req, res) => {
         botResponse = 'Hello! How can I assist you today?';
     } else if (userMessage.includes('generate the museum tour ticket')) {
         botResponse = 'Generating your museum tour ticket...';
-        await generatePDF();
-        botResponse = 'Your ticket has been generated. <a href="/ticket.pdf" target="_blank">Download your ticket here</a>';
+        try {
+            await generatePDF();
+            botResponse = 'Your ticket has been generated. <a href="/ticket.pdf" target="_blank">Download your ticket here</a>';
+        } catch (error) {
+            console.error('Error generating PDF:', error);
+            botResponse = 'There was an error generating your ticket. Please try again later.';
+        }
     } else if (userMessage.includes('menu')) {
         botResponse = 'Here are the options:\n1. Book a ticket\n2. Generate the museum tour ticket\n3. Make a payment\n4. Start voice recognition\n5. Start image recognition';
     }
@@ -49,27 +52,33 @@ app.post('/chat', async (req, res) => {
 });
 
 async function generatePDF() {
-    const pdfDoc = await PDFDocument.create();
-    const page = pdfDoc.addPage([600, 400]);
-    const { width, height } = page.getSize();
-    const fontSize = 30;
+    try {
+        const pdfDoc = await PDFDocument.create();
+        const page = pdfDoc.addPage([600, 400]);
+        const { width, height } = page.getSize();
+        const fontSize = 30;
 
-    page.drawText('Museum Tour Ticket', {
-        x: 50,
-        y: height - 4 * fontSize,
-        size: fontSize,
-        color: rgb(0, 0.53, 0.71),
-    });
+        page.drawText('Museum Tour Ticket', {
+            x: 50,
+            y: height - 4 * fontSize,
+            size: fontSize,
+            color: rgb(0, 0.53, 0.71),
+        });
 
-    page.drawText('Thank you for booking a tour with us!', {
-        x: 50,
-        y: height - 6 * fontSize,
-        size: fontSize,
-        color: rgb(0, 0, 0),
-    });
+        page.drawText('Thank you for booking a tour with us!', {
+            x: 50,
+            y: height - 6 * fontSize,
+            size: fontSize,
+            color: rgb(0, 0, 0),
+        });
 
-    const pdfBytes = await pdfDoc.save();
-    fs.writeFileSync(path.join(__dirname, 'public', 'ticket.pdf'), pdfBytes);
+        const pdfBytes = await pdfDoc.save();
+        fs.writeFileSync(path.join(__dirname, 'public', 'ticket.pdf'), pdfBytes);
+        console.log('PDF generated successfully');
+    } catch (error) {
+        console.error('Error generating PDF:', error);
+        throw error;
+    }
 }
 
 app.post('/pay', async (req, res) => {

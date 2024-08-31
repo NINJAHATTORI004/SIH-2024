@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot with Voice and Payment Integration</title>
+    <title>National Gallery of Historic Art | About</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -13,14 +13,15 @@
   </head>
   <body>
     <header>
-      <h1 class="sedan-sc-regular">National Gallery of Historic Art</h1>
+      <h1 class="sedan-sc-regular">
+        <a id="heading-title" href="index.html">
+          National Gallery of Historic Art
+        </a>
+      </h1>
       <nav>
         <ul>
           <li>
-            <a href="index.html"> Home </a>
-          </li>
-          <li>
-            <a href="exhibitions.html">Exhibitions</a>
+            <a href="index.html">Exhibitions</a>
           </li>
           <li><a href="shop.html">Gift Shop</a></li>
           <li><a href="support.html"> Support Us </a></li>
@@ -30,28 +31,55 @@
     <div class="about">
       <section class="about-section">
         <h1>About Us</h1>
-        <h2>Welcome to the National Gallery of Historic Art</h2>
-        <p>At the National Gallery of Historic Art, we are passionate about celebrating and preserving the rich heritage of 
-          human creativity through art. Our mission is to provide an inspiring and educational experience by showcasing a diverse 
-          collection of historic artworks that span centuries and cultures</p>
-          <h2>Our Vision</h2>
-          <img src="images/vision.jpg" alt="our vision">
-        <p>Our vision is to be a leading cultural institution that fosters a deeper understanding of art and its role in shaping history. We believe that art is a powerful reflection of human experience, and through our exhibits and programs, we aim to connect visitors with the stories and traditions that have influenced artistic expression throughout the ages.</p>
+        <p id="introduction">
+          At the National Gallery of Historic Art, we are passionate about
+          celebrating and preserving the rich heritage of human creativity
+          through art. Our mission is to provide an inspiring and educational
+          experience by showcasing a diverse collection of historic artworks
+          that span centuries and cultures
+        </p>
+        <h2>Our Vision</h2>
+        <p>
+          Our vision is to be a leading cultural institution that fosters a
+          deeper understanding of art and its role in shaping history. We
+          believe that art is a powerful reflection of human experience, and
+          through our exhibits and programs, we aim to connect visitors with the
+          stories and traditions that have influenced artistic expression
+          throughout the ages.
+        </p>
         <h2>Our History</h2>
         <img src="images/history.jpg" alt="Historical Architecture">
-        <p>The National Gallery of Historic Art began with a vision to create a space where art lovers could explore and learn about
-           the rich history of artistic achievement. Over the years, we have grown into a renowned institution with a commitment to 
-           preserving the legacy of historic art while making it accessible to a global audience.</p>
+        <p>
+          The National Gallery of Historic Art began with a vision to create a
+          space where art lovers could explore and learn about the rich history
+          of artistic achievement. Over the years, we have grown into a renowned
+          institution with a commitment to preserving the legacy of historic art
+          while making it accessible to a global audience.
+        </p>
         <h2>Our Commitmentt</h2>
-        <p>We are dedicated to maintaining the highest standards of conservation and scholarship. Our team of experts works tirelessly 
-          to ensure that our collections are preserved for future generations, while our educational initiatives strive to make art
-           history engaging and relevant.</p>
-           <h2>Join Us</h2>
-        <p>We invite you to explore our galleries, participate in our programs, and become a part of our vibrant community. Whether you are a seasoned art aficionado or new to the world of art, the National Gallery of Historic Art offers something for everyone.
-
-          Thank you for visiting our website. We look forward to welcoming you to our gallery and sharing the wonders of historic art with you.</p>
-          <h2>Contact Us</h2>
-        <p>For more information about our exhibitions, programs, or to plan your visit, please contact us at johnny123@gmail.com. Stay connected with us on social media and subscribe to our newsletter to receive the latest updates and events.</p>
+        <p>
+          We are dedicated to maintaining the highest standards of conservation
+          and scholarship. Our team of experts works tirelessly to ensure that
+          our collections are preserved for future generations, while our
+          educational initiatives strive to make art history engaging and
+          relevant.
+        </p>
+        <h2>Join Us</h2>
+        <p>
+          We invite you to explore our galleries, participate in our programs,
+          and become a part of our vibrant community. Whether you are a seasoned
+          art aficionado or new to the world of art, the National Gallery of
+          Historic Art offers something for everyone. Thank you for visiting our
+          website. We look forward to welcoming you to our gallery and sharing
+          the wonders of historic art with you.
+        </p>
+        <h2>Contact Us</h2>
+        <p>
+          For more information about our exhibitions, programs, or to plan your
+          visit, please contact us at johnny123@gmail.com. Stay connected with
+          us on social media and subscribe to our newsletter to receive the
+          latest updates and events.
+        </p>
       </section>
     </div>
 
@@ -97,8 +125,12 @@
       </div>
     </div>
     <button id="popup-open">Buy Tickets</button>
-    <button class="floating-button" onclick="startImageRecognition()">
-      Image
+    <button
+      id="image-search"
+      class="floating-button"
+      onclick="startImageRecognition()"
+    >
+      Image Search
     </button>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="script.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot with Voice and Payment Integration</title>
+    <title>National Gallery of Historic Art | Support</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -13,17 +13,18 @@
   </head>
   <body>
     <header>
-      <h1 class="sedan-sc-regular">National Gallery of Historic Art</h1>
+      <h1 class="sedan-sc-regular">
+        <a id="heading-title" href="index.html">
+          National Gallery of Historic Art
+        </a>
+      </h1>
       <nav>
         <ul>
-          <li>
-            <a href="index.html"> Home </a>
-          </li>
           <li>
             <a href="about.html"> About Us </a>
           </li>
           <li>
-            <a href="exhibitions.html">Exhibitions</a>
+            <a href="index.html">Exhibitions</a>
           </li>
           <li><a href="shop.html">Gift Shop</a></li>
         </ul>
@@ -85,7 +86,11 @@
       </div>
     </div>
     <button id="popup-open">Buy Tickets</button>
-    <button class="floating-button" onclick="startImageRecognition()">
+    <button
+      id="image-search"
+      class="floating-button"
+      onclick="startImageRecognition()"
+    >
       Image Search
     </button>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
