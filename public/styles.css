@@ -164,6 +164,10 @@ article h3 {
 .about-section h2 {
   font-size: 3em;
 }
+
+.about-section img {
+  width: 100%;
+}
 /* Chatbot popup */
 .chatbot-heading {
   display: flex;
