@@ -200,6 +200,10 @@ section img {
 .museum-card a {
   max-width: max-content;
 }
+#iaf {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/zoshua-colah-uvrHfBbFcQw-unsplash.jpg");
+}
 /* Chatbot popup */
 .chatbot-heading {
   display: flex;
