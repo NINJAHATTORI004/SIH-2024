@@ -1,7 +1,7 @@
 # SIH-2024 (Reserve.AI)
 
 Reserve.Ai is designed to simplify the ticket booking process for museums. This project integrates the Botpress chatbot framework with the Razorpay payment gateway to offer a seamless, user-friendly experience with high data security. The system supports multiple languages, voice-to-text, text-to-voice, image recognition, and keyword recognition features.
-![1](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/ssss.jpg) 
+![1](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/reserve.ai.png) 
 
 # Features
 Automated Ticket Booking: Streamlines the ticket booking process for museums.
