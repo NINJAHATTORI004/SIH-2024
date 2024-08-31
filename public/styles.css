@@ -204,6 +204,33 @@ section img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
     url("images/zoshua-colah-uvrHfBbFcQw-unsplash.jpg");
 }
+#rail {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/amanda-stockton-i-ICO9sMgpw-unsplash.jpg");
+  background-position: center;
+  background-size: contain;
+}
+#indra {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/indra.jpeg");
+  background-position: center;
+}
+#ghandi {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/gandhi.jpeg");
+  background-position: left;
+}
+#doll {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/doll.jpeg");
+  background-position: center;
+}
+#modern {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("images/modern.jpeg");
+  background-position: center;
+}
+
 /* Chatbot popup */
 .chatbot-heading {
   display: flex;
