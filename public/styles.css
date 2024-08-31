@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 .kode-mono-font {
   font-family: "Kode Mono", "Courier New", "Lucida Console", monospace;
   font-optical-sizing: auto;
@@ -34,6 +35,8 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  font-family: "Lora", "Helvetica Neue", "Arial", "Segoe UI", sans-serif;
+  font-weight: 100;
 }
 
 h1 {
