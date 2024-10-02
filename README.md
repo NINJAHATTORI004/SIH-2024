@@ -1,7 +1,7 @@
 # SIH-2024 (Reserve.AI)
 
 Reserve.Ai is designed to simplify the ticket booking process for museums. This project integrates the Botpress chatbot framework with the Razorpay payment gateway to offer a seamless, user-friendly experience with high data security. The system supports multiple languages, voice-to-text, text-to-voice, image recognition, and keyword recognition features.
-![1](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/reserve.ai.png) 
+![Homepage of our website with ticket chatbot open.](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/reserve.ai.png) 
 
 # Features
 Automated Ticket Booking: Streamlines the ticket booking process for museums.
@@ -29,7 +29,7 @@ Vision AI: Image recognition technology for processing and interpreting visual d
 MongoDB: NoSQL database for storing user data and booking information.
 
 # Botpress OVERVIEW 
-![2](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/BOTPRESS%20MODEL.jpg) 
+![Bot workflow chart showing the process for handling user inquiries](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/BOTPRESS%20MODEL.jpg) 
 
 # Installation Prerequisites
 
@@ -43,7 +43,7 @@ For any questions or support, please reach out to anshmittal132@gmail.com.
 
   
 # Reserve.AI OVERFLOW
-![3](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/bot%20overflow.jpg
-)  
+![Complete workflow diagram for Reserve.AI, including front-end, chatbot, and backend processes](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/bot%20overflow.jpg)
+
 # Reserve.AI Interface
-![4](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/Reserve.AI%20WORKING.png)   
+![Chatbot user input interface workflow diagram](https://github.com/NINJAHATTORI004/SIH-2024/blob/main/Reserve.AI%20WORKING.png)   
